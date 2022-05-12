@@ -18,13 +18,16 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server -p3001 --watch db.json",
-    "eslint": "eslint --fix --ext .js,.jsx ."
+    "eslint": "eslint --fix --ext .js,.jsx .",
+    "cypress:open": "cypress open",
+    "test:e2e": "cypress run"
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:cypress/recommended"
     ]
   },
   "browserslist": {
@@ -41,6 +44,8 @@
   },
   "devDependencies": {
     "@testing-library/user-event": "^14.1.1",
+    "cypress": "^9.6.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-jest": "^26.1.5",
     "json-server": "^0.17.0"
   }
